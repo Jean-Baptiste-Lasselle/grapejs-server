@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "Dpendency Resolution"
+
 npm install
 
 # Structure
