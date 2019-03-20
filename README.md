@@ -13,11 +13,20 @@ https://parceljs.org/getting_started.html
 
 
 ```bash
+
 export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient
+
+# -- System : Alpine
+# apk update && apk add git tree
+
+# -- System : CeentOS
+# yum uopdate -y && yum install -y git tree
+
 mkdir -p ~/mjml-edior
 cd /mjml-editor
 git clone $URI_DE_CE_REPO . 
 
+echo "Dpendency Resolution"
 npm install
 
 # Structure
@@ -34,8 +43,14 @@ cp node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js ./public/assets/grapesjs
 # Installing fonts
 cp ./node_modules/font-awesome/fonts/fontawesome-webfont.woff2 ./public/assets/font-awesome/fonts/fontawesome-webfont.woff2
 
-
-node omegga.js
+# 
+# Pour faire le bundle du client
+# Les [parcel index.html] et [parcel watch index.html] démarrent un serveur sur le port 1234
+echo "Building : Client Bundle"
+parcel build index.html
+tree -allh
+# pour démarrer le serveur, mais ce n'est que pour le mode dev.
+# node omegga.js
 ```
 
 
