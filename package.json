@@ -1,0 +1,35 @@
+{
+  "name": "demo-vinse",
+  "version": "0.0.1",
+  "description": "Editeur MJML  dans le browser, une application parcelisée",
+  "main": "omega.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient.git"
+  },
+  "keywords": [
+    "editor",
+    "nodejs",
+    "mjml",
+    "grapesjs"
+  ],
+  "author": "Jean-Baptiste Lasselle",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient/issues"
+  },
+  "homepage": "https://github.com/Jean-Baptiste-Lasselle/demo-nodejs-live#readme",
+  "dependencies": {
+    "grapesjs": "^0.14.55",
+    "grapesjs-mjml": "0.0.31",
+    "mjml": "^4.4.0-beta.1",
+    "express": "^4.16.4",
+    "fontawesome5-webfont": "^5.0.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.2"
+  }
+}
