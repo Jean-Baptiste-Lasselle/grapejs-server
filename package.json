@@ -1,10 +1,11 @@
 {
-  "name": "demo-vinse",
+  "name": "grapesjs-mjml-editor",
   "version": "0.0.1",
-  "description": "Editeur MJML  dans le browser, une application parcelisée",
+  "description": "Editeur MJML dans le browser, une application parcelisée, construite avec https://grapesjs.com",
   "main": "omega.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo 'No tests have been implemented yet for the '",
+    "bundle": "parcel build ./public/index.html"
   },
   "repository": {
     "type": "git",
