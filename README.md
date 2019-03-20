@@ -1,10 +1,3 @@
-# TODO
-
-Faire le pipeline dans l'infra privée, qui : 
-* génère une application pure client web en `NodeJS` : paramétrable (nom de projet, version d'initialisation du projet)
-* fait un premier commit sur le repository dont l'URL est désignée dans le `package.json`. Le robot vérifie que le repository existe, et qu'il n'y a aucun commit encore : s'il y a un premier commit, le robot considèrera que l'initialisation a déjà eu lieu. le repo est créé s'il n'existe pas
-* ne créée pas le repository git, il doit être créé par un autre compoosant (mais cela doit être fait, au plus tard maintenant, le repo est créé s'il n'existe pas)
-
 # grapesjs-mjml-webclient
 
 A simple grapesjs/mjml webclient builded : 
