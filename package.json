@@ -27,7 +27,7 @@
     "grapesjs-mjml": "0.0.31",
     "mjml": "^4.4.0-beta.1",
     "express": "^4.16.4",
-    "fontawesome5-webfont": "^5.0.4"
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.2"
