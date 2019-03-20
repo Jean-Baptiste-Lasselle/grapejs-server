@@ -21,7 +21,7 @@ git clone $URI_DE_CE_REPO .
 npm install
 
 # installing grapesjs inside client bundle
-cp node_modules/grapesjs/dist/grapesjs.min.js
+cp node_modules/grapesjs/dist/grapesjs.min.js ./public
 cp node_modules/grapesjs/dist/css/grapesjs.min.css
 # installing grapesjs-mjmil inside client bundle
 cp node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js
