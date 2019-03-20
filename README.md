@@ -25,8 +25,8 @@ mkdir -p ~/mjml-edior
 cd /mjml-editor
 git clone $URI_DE_CE_REPO . 
 
-chmod +x ./bundle.sh
-./bundle.sh
+chmod +x ./build.sh
+./build.sh
 
 # tree -allh
 # ls -allh
