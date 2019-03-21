@@ -39,19 +39,22 @@ npm run start
 
 # What you get
 
-An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle procedure `npm run build`
+An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle procedure `npm run bundle` , and it will look like : 
+
+![screeshow 1](ccc)
+![screeshow 2](ccc)
+![screeshow 3](ccc)
 
 
-* le `npm init` est là : 
+MERCI_PARCEL_ORG 0.0.1
 
-```bash
-# resolving dependencies, and addding them to package.json
-# npm install grapesjs --save
-# npm install grapesjs-mjml --save 
-# npm install -g parcel-bundler --save-dev
+La moindre des toutes petites dépendances est maitnenant parfaitement chargée : 
+* notamment les boutons qui permettent d'insérer des _doubles-colonnes_, _triples_colonnes_ etc...
+* et là c'est vraiment beau, et otues les fonctions sont opérationnelles.
 
-# resolving package.json dependencies
-# npm install -g parcel-bundler --save-dev
+Grâce à [`Parcel`](https://parceljs.org/getting_started.html)
 
-```
+
+
+
 
