@@ -17,12 +17,12 @@ echo "No Tests to execute yet."
 # ./public/assets/grapesjs-mjml/grapesjs-mjml.min.js
 buildDuProjet () { 
 # Installing grapesjs inside client bundle
-cp node_modules/grapesjs/dist/grapes.min.js ./public/assets/grapesjs
-cp node_modules/grapesjs/dist/css/grapes.min.css ./public/assets/grapesjs
+cp -Rf node_modules/grapesjs/dist/* ./public/assets/grapesjs
+# cp -Rf node_modules/grapesjs/dist/* ./public/assets/grapesjs/css
 # Installing grapesjs-mjmil inside client bundle
-cp node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js ./public/assets/grapesjs-mjml
+cp -Rf node_modules/grapesjs-mjml/dist/* ./public/assets/grapesjs-mjml
 # Installing fonts
-cp node_modules/font-awesome/fonts/* ./public/assets/font-awesome/fonts
+cp -Rf node_modules/font-awesome/* ./public/assets/font-awesome/
 
 # 
 # Pour faire le bundle du client
