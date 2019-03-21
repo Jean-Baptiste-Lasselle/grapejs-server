@@ -11,8 +11,8 @@ npm install
 # ./public/assets/grapesjs-mjml/grapesjs-mjml.min.js
 
 # Installing grapesjs inside client bundle
-cp node_modules/grapesjs/dist/grapesjs.min.js ./public/assets/grapesjs/grapesjs.min.js
-cp node_modules/grapesjs/dist/css/grapesjs.min.css ./public/assets/grapesjs/grapesjs.min.css
+cp node_modules/grapesjs/dist/grapesjs.min.js ./public/assets/grapesjs/grapes.min.js
+cp node_modules/grapesjs/dist/css/grapesjs.min.css ./public/assets/grapesjs/grapes.min.css
 # Installing grapesjs-mjmil inside client bundle 
 cp node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js ./public/assets/grapesjs-mjml/grapesjs-mjml.min.js
 # Installing fonts
