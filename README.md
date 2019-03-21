@@ -29,6 +29,14 @@ chmod +x ./build.sh
 ./build.sh
 
 ```
+# Load an HTML5 template
+
+```bash
+
+chmod +x ./charger-projet.sh
+./charger-projet.sh
+```
+
 
 # Start it (Dev mode)
 
