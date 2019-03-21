@@ -28,7 +28,7 @@ chargerleProjet () {
 while true; do
     read -p "Do you confirm you want to load this template?" yn
     case $yn in
-        [Yy]* ) chargerleProjet;
+        [Yy]* ) chargerleProjet;;
         [Nn]* ) demanderURL_TEMPLATE;;
         * ) echo "Please answer yes or no.";;
     esac
