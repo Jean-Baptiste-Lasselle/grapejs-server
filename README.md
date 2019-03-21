@@ -67,11 +67,11 @@ An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle proc
 ![screeshow 1](https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient/raw/master/documentations/images/MJML_EDITOR_SCREENSHOW_1_2019-03-21%2002-58-43.png)
 
 
-![screeshow 2](ccc)
+![screeshow 2](https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient/raw/master/documentations/images/MJML_EDITOR_SCREENSHOW_2019-03-21%2003-00-55.png)
 
-
+<!--
 ![screeshow 3](ccc)
-
+-->
 
 
 MERCI_PARCEL_ORG 0.0.1
