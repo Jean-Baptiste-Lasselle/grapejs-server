@@ -22,7 +22,7 @@ cp node_modules/grapesjs/dist/css/grapes.min.css ./public/assets/grapesjs
 # Installing grapesjs-mjmil inside client bundle
 cp node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js ./public/assets/grapesjs-mjml
 # Installing fonts
-cp node_modules/font-awesome/fonts/fontawesome-webfont.woff2 ./public/assets/font-awesome/fonts
+cp node_modules/font-awesome/fonts/* ./public/assets/font-awesome/fonts
 
 # 
 # Pour faire le bundle du client
