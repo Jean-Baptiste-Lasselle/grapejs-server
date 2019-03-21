@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Dpendency Resolution"
+echo "Dependency Resolution"
 
 npm install
 
@@ -23,4 +23,5 @@ cp ./node_modules/font-awesome/fonts/fontawesome-webfont.woff2 ./public/assets/f
 # Les [parcel index.html] et [parcel watch index.html] démarrent un serveur sur le port 1234
 echo "Building : Client Bundle"
 # see. https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient/blob/620ead430419749662eecd783c170ed7b7e543dd/package.json#L8
+npm run bundle
 echo "Client Bundle Build successfully completed."
