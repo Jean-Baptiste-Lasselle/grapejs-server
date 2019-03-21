@@ -36,4 +36,5 @@ echo "Client Bundle Build successfully completed."
 
 
 #le plus petit pipeline du monde
-resolutionDesDependances && npm run waitaminute  && npm run test && buildDuProjet
+resolutionDesDependances && npm run test && buildDuProjet
+# && npm run waitaminute 
