@@ -1,25 +1,24 @@
 # grapesjs-mjml-webclient
 
-A simple grapesjs/mjml webclient builded : 
-* Once with `Browserify`, but I almost immediately looked up the internet in search of a `css bundler`, and soon I switched to [`Parcel`](https://parceljs.org/getting_started.html)
-* Today using npm and  [`Parcel`](https://parceljs.org/getting_started.html) from https://github.com/artf/grapesjs-mjml (a great job from mailjet.com team ) : What I loved about it, is that it will keep failing your build as long as it has not catched every one single dependency, be it a font file, referenced in css file, import in another css file. With Parcel, you always get a demo just as good as the author. Ths repo is a good example, the MJML Editor is pretty neat :100: !
-* Soon with [webpack](https://webpack.js.org/)
+A bare grapesjs Instance served by asimple node/express static webserver
+
 
 # Build it
 
 https://parceljs.org/getting_started.html
 
 ```bash
-export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient
+export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapejs-server
 
 # -- System : Alpine
 # apk update && apk add git tree
 
-# -- System : CeentOS
+# -- System : CentOS
 # yum update -y && yum install -y git tree
 
-mkdir -p ~/mjml-edior
-cd /mjml-editor
+mkdir -p ~/grapesjs-server
+cd /grapesjs-server
+
 git clone $URI_DE_CE_REPO . 
 
 chmod +x ./build.sh
@@ -29,6 +28,7 @@ chmod +x ./build.sh
 # ls -allh
 # pour démarrer le serveur, mais ce n'est que pour le mode dev.
 # node omegga.js
+npm run start
 ```
 # Test it lazy
 
