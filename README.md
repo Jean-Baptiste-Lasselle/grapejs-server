@@ -34,8 +34,24 @@ chmod +x ./build.sh
 
 You can try that one and share it with our friends with [the _`NodeJS` Katacoda playgraound_](https://www.katacoda.com/courses/nodejs/playground)
 
+Just copy paste that to the inbrowser-Katacoda-shell :
+
 ```bash
-npm run start
+export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient
+
+# -- System : Alpine
+# apk update && apk add git tree
+
+# -- System : CeentOS
+# yum update -y && yum install -y git tree
+
+mkdir -p ~/mjml-edior
+cd /mjml-editor
+git clone $URI_DE_CE_REPO . 
+
+chmod +x ./build.sh
+./build.sh
+
 ```
 
 # Test it (Dev mode)
