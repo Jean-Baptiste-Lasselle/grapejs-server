@@ -74,15 +74,6 @@ An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle proc
 -->
 
 
-MERCI_PARCEL_ORG 0.0.1
-
-La moindre des toutes petites dépendances est maitnenant parfaitement chargée : 
-* notamment les boutons qui permettent d'insérer des _doubles-colonnes_, _triples_colonnes_ etc...
-* et là c'est vraiment beau, et otues les fonctions sont opérationnelles.
-
-Grâce à [`Parcel`](https://parceljs.org/getting_started.html)
-
-
 
 
 
