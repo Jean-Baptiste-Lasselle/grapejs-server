@@ -1,4 +1,4 @@
-# https://www.npmjs.com/package/wait-until
+// https://www.npmjs.com/package/wait-until
 var waitUntil = require('wait-until');
 var fs = require('fs');
 
