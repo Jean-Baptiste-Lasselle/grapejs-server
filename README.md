@@ -9,9 +9,6 @@ A simple grapesjs/mjml webclient builded :
 
 https://parceljs.org/getting_started.html
 
-
-
-
 ```bash
 export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient
 
@@ -34,6 +31,15 @@ chmod +x ./build.sh
 # node omegga.js
 ```
 
+# Test it (Dev mode)
+
+```bash
+npm run start
+```
+
+# What you get
+
+An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle procedure `npm run build`
 
 
 * le `npm init` est là : 
