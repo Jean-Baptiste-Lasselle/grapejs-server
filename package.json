@@ -1,11 +1,10 @@
 {
-  "name": "grapesjs-mjml-editor",
+  "name": "grapesjs-server",
   "version": "0.0.1",
-  "description": "Editeur MJML dans le browser, une application parcelisée, construite avec https://grapesjs.com",
-  "main": "omega.js",
+  "description": "Un simpl serveur HTTP statique, et le client grapesjs servi comme contenu statique",
+  "main": "alpha.js",
   "scripts": {
     "test": "echo 'No tests have been implemented yet for the '",
-    "waitaminute": "node build.waitaminute.js",
     "bundle": "parcel build ./public/index.html",
     "start": "node omega.js"
   },
@@ -14,7 +13,7 @@
     "url": "git+ssh://git@github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient.git"
   },
   "keywords": [
-    "editor",
+    "server",
     "nodejs",
     "mjml",
     "grapesjs"
@@ -26,14 +25,11 @@
   },
   "homepage": "https://github.com/Jean-Baptiste-Lasselle/demo-nodejs-live#readme",
   "dependencies": {
-    "grapesjs": "^0.14.55",
-    "grapesjs-mjml": "0.0.31",
-    "mjml": "^4.4.0-beta.1",
+    "grapesjs": "0.14.55",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.2",
-    "wait-until": "0.0.2" 
+    "parcel-bundler": "^1.12.2"
   }
 }
