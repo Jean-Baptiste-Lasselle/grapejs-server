@@ -1,6 +1,10 @@
-# grapesjs-mjml-webclient
+# Grapesjs server
 
 A bare grapesjs Instance served by asimple node/express static webserver
+
+Release invetory : 
+* `0.0.1` : gives you exactly what a bare grapesjs instance should be, meaning almostno controls on the block toolbox, etc... Gives you exactly whatyou've got live at ccc, source code at https://github.com/artf/grapesjs
+* `0.0.2` : givesyou exactly whatyou've got live at ccc, source code at https://github.com/artf/grapesjs-preset-webpage
 
 
 # Build it
