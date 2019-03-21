@@ -2,7 +2,7 @@
 
 A bare grapesjs Instance served by asimple node/express static webserver
 
-Release invetory : 
+Release inventory : 
 * `0.0.1` : gives you exactly what a bare grapesjs instance should be, meaning almostno controls on the block toolbox, etc... Gives you exactly whatyou've got live at ccc, source code at https://github.com/artf/grapesjs
 * `0.0.2` : gives you exactly whatyou've got live at https://grapesjs.com/demo.html, source code at https://github.com/artf/grapesjs-preset-webpage
 
@@ -35,7 +35,8 @@ chmod +x ./build.sh
 ```bash
 npm run start
 ```
-**_What you get_**
+
+**_What you get with release `0.0.1`_**
 
 An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle procedure `npm run bundle` , and it will look like : 
 
@@ -63,6 +64,7 @@ chmod +x ./build.sh
 
 # pour démarrer le serveur, mais ce n'est que pour le mode dev.
 npm run start
+
 ```
 
 
