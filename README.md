@@ -2,7 +2,7 @@
 
 A simple grapesjs/mjml webclient builded : 
 * Once with `Browserify`, but I almost immediately looked up the internet in search of a `css bundler`, and soon I switched to [`Parcel`](https://parceljs.org/getting_started.html)
-* Today using npm and  [`Parcel`](https://parceljs.org/getting_started.html) from https://github.com/artf/grapesjs-mjml (a great job from mailjet.com team ) : What I loved about it, is that it will keep failing your build as long as it has not catched every one single dependency, be it a font file, referenced in css file, import in another css file. With Parcel, you always get a demo just as good as the author. Ths repo is a good example, the MJML Editor is pretty neat... :l: 
+* Today using npm and  [`Parcel`](https://parceljs.org/getting_started.html) from https://github.com/artf/grapesjs-mjml (a great job from mailjet.com team ) : What I loved about it, is that it will keep failing your build as long as it has not catched every one single dependency, be it a font file, referenced in css file, import in another css file. With Parcel, you always get a demo just as good as the author. Ths repo is a good example, the MJML Editor is pretty neat :100: !
 * Soon with [webpack](https://webpack.js.org/)
 
 # Build it
