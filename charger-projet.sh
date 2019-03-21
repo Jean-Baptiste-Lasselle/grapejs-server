@@ -25,16 +25,18 @@ chargerleProjet () {
 
 }
 
+demanderURL_TEMPLATE
+
 while true; do
     echo "[$URL_TEMPLATE_HTML5]"
     read -p "Do you confirm you want to load this template?" yn
     case $yn in
         [Yy]* ) chargerleProjet;; break;;
-        [Nn]* ) demanderURL_TEMPLATE;; break;;
+        [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 
-echo "Salut les poulets"
+echo "Kata Prêt!"
 
 
