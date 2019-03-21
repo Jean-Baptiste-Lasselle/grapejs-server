@@ -25,9 +25,8 @@
   },
   "homepage": "https://github.com/Jean-Baptiste-Lasselle/demo-nodejs-live#readme",
   "dependencies": {
-    "grapesjs": "0.14.55",
-    "express": "^4.16.4",
-    "font-awesome": "^4.7.0"
+    "grapesjs-preset-webpage": "^0.1.10",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.2"
