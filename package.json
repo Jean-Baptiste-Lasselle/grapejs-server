@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo 'No tests have been implemented yet for the '",
     "waitaminute": "node build.waitaminute.js",
-    "bundle": "waitaminute && arcel build ./public/index.html",
+    "bundle": "parcel build ./public/index.html",
     "start": "node omega.js"
   },
   "repository": {
