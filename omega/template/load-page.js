@@ -5,8 +5,18 @@
  * 
  * - downloads and installs the chosen HTML5 template into the /workspace/omega folder
  * - serves statically the /grapes folder, using expressjs.com
- * - serves statically the /workspace folder, using expressjs.com
- * - parse the page, and adds the /omega prefix to all href and src attributes values
+ * - serves statically the /workspace folder, using expressjs.com : this makes all template files under the /workspace/omega folder
+ * - after that, omega grabs the top HTML file in the /workspace/omega folder, 
+ * - parse the page, and adds the /omega prefix to all href and src attributes values, all but : 
+ *    - those starting with the '#' character
  * 
  * 
  * /
+ 
+ 
+const replaceString = require('replace-string');
+ 
+const input = 'My friend has a 🐑. I want a 🐑 too!';
+ 
+replaceString(input, '🐑', '🦄');
+//=> 'My friend has a 🦄. I want a 🦄 too!'
