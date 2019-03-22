@@ -18,6 +18,9 @@ echo "No Tests to execute yet."
 buildDuProjet () { 
 # Installing grapesjs inside client bundle
 cp -Rf node_modules/grapesjs-preset-webpage/* ./grapes/
+# replcaing by my own custom HTML, to configure StorageMManager : 
+rm ./grapes/index.html
+cp grapes.html ./grapes/index.html
 
 # 
 # Pour faire le bundle du client
