@@ -33,8 +33,8 @@ while true; do
     echo "[$URL_TEMPLATE_HTML5]"
     read -p "Do you confirm you want to load this template?" yn
     case $yn in
-        [Yy]* ) chargerleProjet;; break;;
-        [Nn]* ) exit;;
+        [Yy]* ) chargerleProjet; break;;
+        [Nn]* ) "Cancelled loading HTML5 template" && exit 0;;
         * ) echo "Please answer yes or no.";;
     esac
 done
