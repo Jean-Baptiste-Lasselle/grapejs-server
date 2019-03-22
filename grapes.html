@@ -89,8 +89,12 @@
           autosave: 1,
           autoload: 1,
           stepsBeforeSave: 1, // If autosave enabled, indicates how many steps (general changes to structure), need to be done before save. Useful with remoteStorage to reduce remote calls
-          urlLoad: "./template/get/" + this.state.editorType + "/" + this.props.templateId,// Endpoint where to fetch data
-          urlStore: "./template/save/" + this.props.templateId, // Endpoint where to save all stuff
+          // urlLoad: "./template/get/" + this.state.editorType + "/" + this.props.templateId,// Endpoint where to fetch data
+          urlLoad: "./template/get/",// Endpoint where to fetch data
+          
+          //urlStore: "./template/save/" + this.props.templateId, // Endpoint where to save all stuff
+          urlStore: "./template/save/", // Endpoint where to save all stuff
+          
           headers: { "x-apiKey": "XXXXXXOKVINSEXXXXXX" },
           contentTypeJson: true // false: 'x-www-form-urlencoded' // true: application/json; charset=utf-8'   // set contentType paramater of $.ajax
         },
