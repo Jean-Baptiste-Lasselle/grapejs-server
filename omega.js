@@ -11,13 +11,27 @@ console.log("vérification hostname : " + hostname);
 console.log("vérification numeroPortMonAppli : " + numeroPortMonAppli);
 console.log("vérification BACKLOG : " + nombreMaximalDeRequetesEnTraitement);
 
-
+/**
+ *
+ *   OMEGA APP
+ * 
+ ***/
 var omega = express();
 
-// app.use(express.static('.'));
-//
+/**
+ *
+ *   OMEGA APP STATIC ROUTES
+ * 
+ ***/
 omega.use(express.static('grapes'));
 omega.use(express.static('workspace'));
+
+
+var storage_endpoint = require('template-storage-endpoint');
+
+omega.use('/storage', storage_endpoint);
+
+
 
 // https://nodejs.org/api/net.html#net_server_listen
 // server.listen([port[, host[, backlog]]][, callback]) for TCP servers 
@@ -25,7 +39,7 @@ omega.use(express.static('workspace'));
 var server = omega.listen(numeroPortMonAppli, hostname, nombreMaximalDeRequetesEnTraitement, function(){
     var numport = server.address().port;
     var nomReseau = server.address().address;
-    var nbMaxReq = server.backlog;
+    var nbMaxReq = server.backlog();
     
     console.log("Omega Server started at http://" + nomReseau + ":%s", numport + " [nbMaxReq] " + nbMaxReq);
 });
