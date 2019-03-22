@@ -26,7 +26,7 @@ omega.use(express.static('workspace'));
 var server = omega.listen(numeroPortMonAppli, hostname, nombreMaximalDeRequetesEnTraitement, function(){
     var numport = server.address().port;
     var nomReseau = server.address().address;
-    var nbMaxReq = server.address().backlog;
+    var nbMaxReq = server.backlog;
     
     console.log("Omega Server started at http://" + nomReseau + ":%s", numport + " [nbMaxReq] " + nbMaxReq);
 });
