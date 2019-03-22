@@ -47,7 +47,11 @@ chmod +x ./charger-projet.sh
 # Start it (Dev mode)
 
 ```bash
-export PORT=3000 && npm run start
+export OMEGA_PORT=3000 
+export OMEGA_HOST=0.0.0.0 
+export OMEGA_BACKLOG=3000 
+
+npm run start
 ```
 
 **_What you get with release `0.0.1`_**
