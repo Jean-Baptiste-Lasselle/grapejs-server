@@ -11,12 +11,22 @@
  *    - those starting with the '#' character
  * 
  * 
- * /
+ **/
  
+
  
 const replaceString = require('replace-string');
+const fs = require('fs');
+
+const HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH=process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH;
+
+// fs.readFile('workspace/omega/demofile1.html');
+
+const page = fs.readFile("workspace/omega/" + HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH);
+
+
  
-const input = 'My friend has a 🐑. I want a 🐑 too!';
+// const page = 'My friend has a 🐑. I want a 🐑 too!';
  
 replaceString(input, '🐑', '🦄');
 //=> 'My friend has a 🦄. I want a 🦄 too!'
