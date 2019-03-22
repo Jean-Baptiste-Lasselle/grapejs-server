@@ -20,6 +20,10 @@ const fs = require('fs');
 
 const HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH=process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH;
 
+
+
+console.log("vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH);
+
 // fs.readFile('workspace/omega/demofile1.html');
 
 const page = fs.readFile("workspace/omega/" + HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH);
