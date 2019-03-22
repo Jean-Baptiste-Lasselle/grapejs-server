@@ -27,7 +27,7 @@ omega.use(express.static('grapes'));
 omega.use(express.static('workspace'));
 
 
-var storage_endpoint = require('template-storage-endpoint');
+var storage_endpoint = require('omega/storage-endpoint.js');
 
 omega.use('/storage', storage_endpoint);
 
