@@ -24,7 +24,7 @@ var findTemplateById = function (templateid, callback) {
        return callback(erreur, page);
        // throw erreur;
     } else {
-       console.log(${htmlFileToLoadForEdition} + ' exists.');
+       console.log(`${htmlFileToLoadForEdition}` + ' exists.');
     }
   
   });
@@ -44,8 +44,8 @@ var findTemplateById = function (templateid, callback) {
 };
 
 
-// an express reference should already be there, created by omega.js entrypoint 
-// var express = require('express');
+// Even though an express reference was created by omega.js entrypoint 
+var express = require('express');
 var storageRouter = express.Router();
 
 // Home page route.
