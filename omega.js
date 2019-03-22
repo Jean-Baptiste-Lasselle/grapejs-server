@@ -10,7 +10,6 @@ const nombreMaximalDeRequetesEnTraitement = process.env.OMEGA_BACKLOG;
 console.log("vérification hostname : " + hostname);
 console.log("vérification numeroPortMonAppli : " + numeroPortMonAppli);
 console.log("vérification BACKLOG : " + nombreMaximalDeRequetesEnTraitement);
-// console.log("vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH);
 
 
 var omega = express();
