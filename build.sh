@@ -17,7 +17,7 @@ echo "No Tests to execute yet."
 # ./public/assets/grapesjs-mjml/grapesjs-mjml.min.js
 buildDuProjet () { 
 # Installing grapesjs inside client bundle
-cp -Rf node_modules/grapesjs-preset-webpage/* ./public/
+cp -Rf node_modules/grapesjs-preset-webpage/* ./grapes/
 
 # 
 # Pour faire le bundle du client
