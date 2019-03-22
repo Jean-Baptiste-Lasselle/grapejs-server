@@ -1,9 +1,9 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
 
-const htmlFileToLoadForEdition = process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
+const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
-console.log("vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
+console.log("Vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
 
 /**
  *
@@ -15,7 +15,22 @@ var findTemplateById = function (templateid, callback) {
   // Perform database query that calls callback when it's done
   // This is our fake database
   // Ici, je vais aller chercher le fichier HMTL omega/index.html, définit par 
-  var page = fs.readFile("workspace/omega/" + htmlFileToLoadForEdition);
+  // Check if the file exists in the current directory.
+  fs.access(htmlFileToLoadForEdition, fs.constants.F_OK, (err) => {
+  
+    console.log(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
+    if (err) {
+       var erreur = new Error(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
+      throw erreur;
+    } else {
+       console.log(${htmlFileToLoadForEdition} + ' exists.'`)
+    }
+  
+  });
+  
+
+  page = fs.readFile("workspace/omega/" + htmlFileToLoadForEdition);
+  
   /*
   if (!users[templateid])
     return callback(new Error(
@@ -24,7 +39,7 @@ var findTemplateById = function (templateid, callback) {
       )
     );
     */
-  return callback(null, users[username]);
+  return callback(null, page);
 };
 
 
