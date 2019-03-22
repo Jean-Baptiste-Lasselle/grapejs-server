@@ -1,11 +1,10 @@
 var express = require("express");
 
-
-const hostname = process.env.HOST;
-const numeroPortMonAppli = process.env.PORT;
+const hostname = process.env.OMEGA_HOST;
+const numeroPortMonAppli = process.env.OMEGA_HOST;
 // cf. `baclklog` argument of listen method, setting maximum number of pending requests
 //  I'll set that to 500 here
-const nombreMaximalDeRequetesEnTraitement = process.env.BACKLOG;
+const nombreMaximalDeRequetesEnTraitement = process.env.OMEGA_BACKLOG;
 // const nombreMaximalDeRequetesEnTraitement = process.env.BACKLOG;
 
 console.log("vérification BACKLOG : " + nombreMaximalDeRequetesEnTraitement);
@@ -21,7 +20,7 @@ omega.use(express.static('workspace'));
 // https://nodejs.org/api/net.html#net_server_listen
 // server.listen([port[, host[, backlog]]][, callback]) for TCP servers 
 // baclklog = maximum number of pending requests, I'll set that to 500 here
-var server = omega.listen(numeroPortMonAppli, hostname, function(){
+var server = omega.listen(numeroPortMonAppli, hostname, nombreMaximalDeRequetesEnTraitement, function(){
     var numport = server.address().port;
     var nomReseau = server.address().address;
     console.log("Omega Server started at http://" + nomReseau + ":%s", numport);
