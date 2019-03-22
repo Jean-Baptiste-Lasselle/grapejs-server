@@ -23,7 +23,7 @@ var findTemplateById = function (templateid, callback) {
        var erreur = new Error(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
       throw erreur;
     } else {
-       console.log(${htmlFileToLoadForEdition} + ' exists.'`)
+       console.log(${htmlFileToLoadForEdition} + ' exists.');
     }
   
   });
