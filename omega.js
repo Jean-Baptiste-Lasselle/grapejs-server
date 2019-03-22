@@ -1,7 +1,7 @@
 var express = require("express");
 
 const hostname = process.env.OMEGA_HOST;
-const numeroPortMonAppli = process.env.OMEGA_HOST;
+const numeroPortMonAppli = process.env.OMEGA_PORT;
 // cf. `baclklog` argument of listen method, setting maximum number of pending requests
 //  I'll set that to 500 here
 const nombreMaximalDeRequetesEnTraitement = process.env.OMEGA_BACKLOG;
