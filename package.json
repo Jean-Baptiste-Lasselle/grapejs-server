@@ -5,7 +5,7 @@
   "main": "alpha.js",
   "scripts": {
     "test": "echo 'No tests have been implemented yet for the '",
-    "bundle": "parcel build ./public/index.html",
+    "bundle": "parcel build ./grapes/index.html",
     "start": "node omega.js"
   },
   "repository": {
