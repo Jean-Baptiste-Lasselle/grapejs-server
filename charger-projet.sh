@@ -1,7 +1,9 @@
 #!/bin/bash
 
 export REPERTOIRE_GRAPEJS=/home/scrapbook/tutorial
-export REPERTOIRE_ESPACE_DE_TRAVAIL_WEB_DESIGNER=$REPERTOIRE_GRAPEJS/public/webdesigner-playground
+# export REPERTOIRE_ESPACE_DE_TRAVAIL_WEB_DESIGNER=$REPERTOIRE_GRAPEJS/public/webdesigner-playground
+export REPERTOIRE_ESPACE_DE_TRAVAIL_WEB_DESIGNER=$REPERTOIRE_GRAPEJS/workspace
+
 
 clear
 
@@ -17,7 +19,7 @@ demanderURL_TEMPLATE () {
 }
 
 chargerleProjet () {
-  # dans $REPERTOIRE_GRAPEJS  ,  le build grapesjs a déjà été fait, mais l'application n'est pas démarrée
+  # dans $REPERTOIRE_GRAPEJS,  le build grapesjs a déjà été fait, mais l'application n'est pas démarrée
 
   mkdir -p $REPERTOIRE_ESPACE_DE_TRAVAIL_WEB_DESIGNER
 
@@ -34,7 +36,7 @@ while true; do
     read -p "Do you confirm you want to load this template?" yn
     case $yn in
         [Yy]* ) chargerleProjet; break;;
-        [Nn]* ) "Cancelled loading HTML5 template" && exit 0;;
+        [Nn]* ) "You have cancelled loading the [$URL_TEMPLATE_HTML5] HTML5 template" && exit 0;;
         * ) echo "Please answer yes or no.";;
     esac
 done
