@@ -49,7 +49,7 @@ chmod +x ./charger-projet.sh
 ```bash
 export OMEGA_PORT=3000 
 export OMEGA_HOST=0.0.0.0 
-export OMEGA_BACKLOG=3000 
+export OMEGA_BACKLOG=500 
 
 npm run start
 ```
