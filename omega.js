@@ -7,7 +7,10 @@ const numeroPortMonAppli = process.env.OMEGA_PORT;
 const nombreMaximalDeRequetesEnTraitement = process.env.OMEGA_BACKLOG;
 // const nombreMaximalDeRequetesEnTraitement = process.env.BACKLOG;
 
+console.log("vérification hostname : " + hostname);
+console.log("vérification numeroPortMonAppli : " + numeroPortMonAppli);
 console.log("vérification BACKLOG : " + nombreMaximalDeRequetesEnTraitement);
+
 
 
 var omega = express();
@@ -23,5 +26,7 @@ omega.use(express.static('workspace'));
 var server = omega.listen(numeroPortMonAppli, hostname, nombreMaximalDeRequetesEnTraitement, function(){
     var numport = server.address().port;
     var nomReseau = server.address().address;
-    console.log("Omega Server started at http://" + nomReseau + ":%s", numport);
+    var nbMaxReq = server.address().backlog;
+    
+    console.log("Omega Server started at http://" + nomReseau + ":%s", numport + " [nbMaxReq] " + nbMaxReq);
 });
