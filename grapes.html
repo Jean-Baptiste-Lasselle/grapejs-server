@@ -78,26 +78,22 @@
 
 
     <script type="text/javascript">
+      
+      // Lets say, for instance, you start with your already defined HTML template and you'd like to
+      // import it on fly for the user
+      const LandingPage = {
+        html: `<!DOCTYPE HTML><html></head><body><h1>Ok Vinse !</h1></body></html>`,
+        css: null,
+        components: null,
+        style: null,
+      };
       var editor = grapesjs.init({
+        
+        components: LandingPage.components || LandingPage.html,
         height: '100%',
         showOffsets: 1,
         noticeOnUnload: 0,
-        // storageManager: { autoload: 0 },
-        storageManager: {
-          id: "gjs",
-          type: "remote",
-          autosave: 1,
-          autoload: 1,
-          stepsBeforeSave: 1, // If autosave enabled, indicates how many steps (general changes to structure), need to be done before save. Useful with remoteStorage to reduce remote calls
-          // urlLoad: "./template/get/" + this.state.editorType + "/" + this.props.templateId,// Endpoint where to fetch data
-          urlLoad: "./template/get/",// Endpoint where to fetch data
-          
-          //urlStore: "./template/save/" + this.props.templateId, // Endpoint where to save all stuff
-          urlStore: "./template/save/", // Endpoint where to save all stuff
-          
-          headers: { "x-apiKey": "XXXXXXOKVINSEXXXXXX" },
-          contentTypeJson: true // false: 'x-www-form-urlencoded' // true: application/json; charset=utf-8'   // set contentType paramater of $.ajax
-        },
+        storageManager: { autoload: 0 },
         container: '#gjs',
         fromElement: true,
         plugins: ['gjs-preset-webpage'],
