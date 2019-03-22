@@ -59,29 +59,6 @@ An in Browser MJML Editor, enriched with `grapesjs`, with its tested bundle proc
 
 ![screeshow 2](https://github.com/Jean-Baptiste-Lasselle/grapesjs-mjml-webclient/raw/master/documentations/images/MJML_EDITOR_SCREENSHOW_2019-03-21%2003-00-55.png)
 
-# Test it lazy
-
-You can try that one and share it with our friends with [the _`NodeJS` Katacoda playgraound_](https://www.katacoda.com/courses/nodejs/playground)
-
-Just copy paste that to the inbrowser-Katacoda-shell :
-
-```bash
-export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapejs-server
-
-mkdir -p ~/grapesjs-server
-cd /grapesjs-server
-
-git clone $URI_DE_CE_REPO . 
-
-chmod +x ./build.sh
-./build.sh
-
-# pour démarrer le serveur, mais ce n'est que pour le mode dev.
-npm run start
-
-```
-
-
 
 
 <!--
