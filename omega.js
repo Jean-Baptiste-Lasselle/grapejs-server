@@ -39,7 +39,7 @@ omega.use('/storage', storage_endpoint);
 var server = omega.listen(numeroPortMonAppli, hostname, nombreMaximalDeRequetesEnTraitement, function(){
     var numport = server.address().port;
     var nomReseau = server.address().address;
-    var nbMaxReq = server.backlog();
+    var nbMaxReq = 511; // 511 is the default server backlog limit // server.backlog();
     
     console.log("Omega Server started at http://" + nomReseau + ":%s", numport + " [nbMaxReq] " + nbMaxReq);
 });
