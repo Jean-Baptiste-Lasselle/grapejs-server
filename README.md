@@ -7,9 +7,15 @@ Release inventory :
 * `0.0.2` : gives you exactly whatyou've got live at https://grapesjs.com/demo.html, source code at https://github.com/artf/grapesjs-preset-webpage
 
 
+
+You can try that one and share it with our friends with [the _`NodeJS` Katacoda playgraound_](https://www.katacoda.com/courses/nodejs/playground)
+
+
 # Build it
 
 https://parceljs.org/getting_started.html
+
+
 
 ```bash
 export URI_DE_CE_REPO=https://github.com/Jean-Baptiste-Lasselle/grapejs-server
@@ -41,7 +47,7 @@ chmod +x ./charger-projet.sh
 # Start it (Dev mode)
 
 ```bash
-npm run start
+export PORT=3000 && npm run start
 ```
 
 **_What you get with release `0.0.1`_**
