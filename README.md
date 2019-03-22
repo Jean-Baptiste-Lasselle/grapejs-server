@@ -50,6 +50,7 @@ chmod +x ./charger-projet.sh
 export OMEGA_PORT=3000 
 export OMEGA_HOST=0.0.0.0 
 export OMEGA_BACKLOG=500 
+export HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH=index.html
 
 npm run start
 ```
