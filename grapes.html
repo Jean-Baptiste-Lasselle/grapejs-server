@@ -116,6 +116,11 @@
       });
       editor.on('storage:load', function(e) {
           console.log(' JBL Just tested that Storage Manager just loaded the following from server :  ', e);
+          editor.html = e.html;
+          editor.css = e.css;
+          editor.style = e.style;
+          editor.components = e.components;
+          
       });
     </script>
   </body>
