@@ -32,6 +32,8 @@ var findTemplateById = function (templateid, callback) {
   console.log(" +++++++++++++++++++++++");
   
   var pageTraitee = new StringBuffer();
+  pageTraitee.append("<html>");
+  
   var parser = new htmlparser();
   //var root = htmlparser.parse(page.toString());
   parser.on('opentag', (name, attrs) => {
@@ -45,13 +47,22 @@ var findTemplateById = function (templateid, callback) {
 	   
      }
      // on close tag
-     pageTraitee.append("<" + name + " " + ">");
-     
+     pageTraitee.append("<" + name + " ");
      Object.keys(attrs).forEach(function(key){
-         console.log(key + '=' + obj[key]);
+         console.log(key + "=" + "'" + attrs[key] + "'");
+         pageTraitee.append(key + '=' + "'" + attrs[key] + "'");
      });
+     
+     pageTraitee.append(" >");
+  });
+  parser.on('closetag', (name, attrs) => {
+     // on close tag
+     pageTraitee.append("</");
+     pageTraitee.append(name);
+     pageTraitee.append(">");
   });
 
+  pageTraitee.append("</html>");
   
   // var pageTraitee = parser.write(page.toString());
   var everythingWentOnGood = parser.write(page.toString());
