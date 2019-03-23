@@ -33,9 +33,12 @@ var findTemplateById = function (templateid, callback) {
   $(`img`).attr(`src`, (i, val) => {
     console.log(" Balise no. " + i + " attribut source = " + val);
   });
-  // $('h2.title').text('Hello there!')
-  // $('h2').addClass('welcome')
-  
+  $("img").each(function() {
+        var old_src=$(this).attr("src");
+        var new_src = "omega/" + old_src;
+        console.log(new_src);
+        $(this).attr("src", new_src);            
+  });
   // $.html()
   
   /*
