@@ -18,7 +18,7 @@ var findTemplateById = function (templateid, callback) {
   // Ici, je vais aller chercher le fichier HMTL omega/index.html, définit par 
 
 
-  page = fs.readFileSync("workspace/omega/" + htmlFileToLoadForEdition);
+  page = fs.readFileSync(htmlFileToLoadForEdition);
   console.log(page.toString());
   /*
   if (!users[templateid])
