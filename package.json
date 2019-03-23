@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/Jean-Baptiste-Lasselle/demo-nodejs-live#readme",
   "dependencies": {
-    // "cheerio": "^1.0.0-rc.2",
     "node-xml-stream": "^1.0.2",
     "grapesjs": "0.14.55",
     "grapesjs-preset-webpage": "0.1.10",
