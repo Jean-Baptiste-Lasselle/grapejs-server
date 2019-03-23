@@ -3,6 +3,7 @@ const replaceString = require('replace-string');
 const htmlparser = require('node-xml-stream');
 // "stringbuffer": "^1.0.0"
 const StringBuffer = require("stringbuffer");
+const _ =require('lodash');
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
@@ -47,7 +48,7 @@ var findTemplateById = function (templateid, callback) {
 	   console.log(" HOP old src :  " + attrs.src);
 	   // attrs = { src: 'omega/' + this.value }
      }
-    if( name === "link" ) {
+    if( name === "link" && _.has(attrs, 'href')) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
 	   console.log(" HOP old href :  " + attrs.href);
@@ -57,7 +58,7 @@ var findTemplateById = function (templateid, callback) {
 	   // link tags auto-close
 	   
      }
-    if( name === "meta" ) {
+    if( name === "meta"  && _.has(attrs, 'charset')) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
 	   console.log(" HOP old charset :  " + attrs.charset);
