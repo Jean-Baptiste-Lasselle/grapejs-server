@@ -50,9 +50,9 @@ var findTemplateById = function (templateid, callback) {
     if( name === "link" ) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
-	   console.log(" HOP old src :  " + attrs.href);
+	   console.log(" HOP old href :  " + attrs.href);
 	   attrs.href = "omega/" + attrs.href;
-	   console.log(" HOP old src :  " + attrs.href);
+	   console.log(" HOP new href :  " + attrs.href);
 	   // attrs = { src: 'omega/' + this.value }
 	   // link tags auto-close
 	   
