@@ -61,6 +61,13 @@ var findTemplateById = function (templateid, callback) {
      pageTraitee.append(name);
      pageTraitee.append(">");
   });
+  
+  // <tag>TEXT</tag>
+  parser.on('text', letext => {
+      // text = 'TEXT'
+      pageTraitee.append(letext);
+  });
+  
 
   pageTraitee.append("</html>");
   
