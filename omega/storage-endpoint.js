@@ -1,9 +1,10 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
+const cheerio = require('cheerio');
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
-console.log("Vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
+console.log("Verification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
 
 
 /**
@@ -15,11 +16,28 @@ console.log("Vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileT
 var findTemplateById = function (templateid, callback) {
   // Perform database query that calls callback when it's done
   // This is our fake database
-  // Ici, je vais aller chercher le fichier HMTL omega/index.html, définit par 
+  // Ici, je vais aller chercher le fichier HMTL omega/index.html, definit par 
 
 
   page = fs.readFileSync(htmlFileToLoadForEdition);
   console.log(page.toString());
+  
+  
+  const $ = cheerio.load(page.toString());
+  
+  console.log(" +++++++++++++++++++++++");
+  console.log(" +++++     ICI    ++++++");
+  console.log(" +++++++++++++++++++++++");
+  
+  // console.log(" attribut source = " + $('image').attr('src'));
+  $(`img`).attr(`src`, (i, val) => {
+    console.log(" Balise no. " + i + " attribut source = " + val);
+  });
+  // $('h2.title').text('Hello there!')
+  // $('h2').addClass('welcome')
+  
+  // $.html()
+  
   /*
   if (!users[templateid])
     return callback(new Error(
@@ -41,7 +59,7 @@ storageRouter.get('/v1/templates/:templateid', function(request, response, next)
   var templateid = request.params.templateid;
   console.log(" >>>>>>>>>>>>>>>>>>>>>  passage dans fonction 1 : templateid=" + templateid);
   findTemplateById(templateid, function(error, template) {
-    console.log(" passage dans call back de la fonction 2 : template=" + template);
+    console.log(" >>>>>>>>>>>>>>>>>>>>>  passage dans fonction 2 ");
     if (error) return next(error);
     //return response.render('templatetoload', templateid);
     // response.setHeader('Content-Type', 'text/html');
