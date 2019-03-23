@@ -32,7 +32,9 @@ var findTemplateById = function (templateid, callback) {
   console.log(" +++++++++++++++++++++++");
   
   var pageTraitee = new StringBuffer();
+  pageTraitee.append("<!DOCTYPE HTML>");
   pageTraitee.append("<html>");
+  
   
   var parser = new htmlparser();
   //var root = htmlparser.parse(page.toString());
@@ -44,7 +46,14 @@ var findTemplateById = function (templateid, callback) {
 	   attrs.src = "omega/" + attrs.src;
 	   console.log(" HOP old src :  " + attrs.src);
 	   // attrs = { src: 'omega/' + this.value }
-	   
+     }
+    if( name === "link" ) {
+	   console.log(" HOP :  " + name);
+	   console.log(" HOP :  " + JSON.stringify(attrs));
+	   console.log(" HOP old src :  " + attrs.href);
+	   attrs.href = "omega/" + attrs.href;
+	   console.log(" HOP old src :  " + attrs.href);
+	   // attrs = { src: 'omega/' + this.value }
      }
      // on close tag
      pageTraitee.append("<" + name + " ");
