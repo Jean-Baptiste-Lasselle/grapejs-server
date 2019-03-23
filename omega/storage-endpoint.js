@@ -1,5 +1,6 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
+const cheerio = require('cheerio');
 const htmlparser = require('node-xml-stream');
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
@@ -35,15 +36,18 @@ var findTemplateById = function (templateid, callback) {
     if( name === "img" ) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
-	   console.log(" HOP :  " + attrs.src);
+	   console.log(" HOP old src :  " + attrs.src);
+	   attrs.src = "omega/" + attrs.src;
+	   console.log(" HOP old src :  " + attrs.src);
 	   //attrs = { src: 'omega/' + this.value }
     }
   });
   
-  var pageTraitee = parser.write(page.toString());
+  // var pageTraitee = parser.write(page.toString());
+  parser.write(page.toString());
   
-  
-  
+  var pageTraitee = parser.end();
+  console.log(JSON.stringify(pageTraitee));
   return callback(null, pageTraitee);
 };
 
