@@ -1,6 +1,5 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
-const cheerio = require('cheerio');
 const htmlparser = require('node-xml-stream');
 // "stringbuffer": "^1.0.0"
 const StringBuffer = require("stringbuffer");
