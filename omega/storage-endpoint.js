@@ -1,6 +1,5 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
-const cheerio = require('cheerio');
 const htmlparser = require('node-xml-stream');
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
@@ -33,8 +32,12 @@ var findTemplateById = function (templateid, callback) {
   var parser = new htmlparser();
   //var root = htmlparser.parse(page.toString());
   parser.on('opentag', (name, attrs) => {
+    if( name === "img" ) {
 	   console.log(" HOP :  " + name);
-	   attrs = { src: 'omega/' + this.value }
+	   console.log(" HOP :  " + JSON.stringify(attrs));
+	   console.log(" HOP :  " + attrs.src);
+	   //attrs = { src: 'omega/' + this.value }
+    }
   });
   
   var pageTraitee = parser.write(page.toString());
