@@ -36,16 +36,26 @@ var findTemplateById = function (templateid, callback) {
 var express = require('express');
 var storageRouter = express.Router();
 
-// Home page route.
+// Storage route.   http://$HOSTNAME/storage/v1/templates/4
 storageRouter.get('/v1/templates/:templateid', function(request, response, next) {
   var templateid = request.params.templateid;
   console.log(" >>>>>>>>>>>>>>>>>>>>>  passage dans fonction 1 : templateid=" + templateid);
-  findTemplateById(templateid, function(error, templateid) {
-    console.log(" passage dans call back de la fonction 2 : templateid=" + templateid);
+  findTemplateById(templateid, function(error, template) {
+    console.log(" passage dans call back de la fonction 2 : template=" + template);
     if (error) return next(error);
-    return response.render('templatetoload', templateid);
+    //return response.render('templatetoload', templateid);
+    // response.setHeader('Content-Type', 'text/html');
+    response.setHeader('Content-Type', 'application/json');
+    var jsonRetourne = {};
+    jsonRetourne.html = template.toString();
+    jsonRetourne.css = null;
+    jsonRetourne.style = null;
+    jsonRetourne.components = null;
+    return response.send(jsonRetourne);
+    
   });
 });
+
 
 
 module.exports = storageRouter;
