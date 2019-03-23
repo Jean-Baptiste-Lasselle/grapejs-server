@@ -29,7 +29,8 @@
     "grapesjs": "0.14.55",
     "grapesjs-preset-webpage": "0.1.10",
     "express": "4.16.4",
-    "replace-string": "2.0.0"
+    "replace-string": "2.0.0",
+     "stringbuffer": "^1.0.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.2"
