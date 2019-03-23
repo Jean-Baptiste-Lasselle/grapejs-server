@@ -22,7 +22,7 @@ var findTemplateById = function (templateid, callback) {
     console.log(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
     if (err) {
        var erreur = new Error(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
-       return callback(erreur, page);
+       return callback(erreur);
        // throw erreur;
     } else {
        console.log(`${htmlFileToLoadForEdition}` + ' exists.');
@@ -32,7 +32,7 @@ var findTemplateById = function (templateid, callback) {
   
 
   page = fs.readFile("workspace/omega/" + htmlFileToLoadForEdition);
-  
+  console.log(page.toString());
   /*
   if (!users[templateid])
     return callback(new Error(
@@ -52,7 +52,7 @@ var storageRouter = express.Router();
 // Home page route.
 storageRouter.get('/v1/templates/:templateid', function(request, response, next) {
   var templateid = request.params.templateid;
-  console.log(" passage dans fonction 1 : templateid=" + templateid);
+  console.log(" >>>>>>>>>>>>>>>>>>>>>  passage dans fonction 1 : templateid=" + templateid);
   findTemplateById(templateid, function(error, templateid) {
     console.log(" passage dans call back de la fonction 2 : templateid=" + templateid);
     if (error) return next(error);
