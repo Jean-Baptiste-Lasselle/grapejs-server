@@ -5,6 +5,7 @@ const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_L
 
 console.log("Vérification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
 
+
 /**
  *
  *   OMEGA APP CUSTOM STORAGE ENDPOINT
@@ -51,9 +52,11 @@ var storageRouter = express.Router();
 // Home page route.
 storageRouter.get('/v1/templates/:templateid', function(request, response, next) {
   var templateid = request.params.templateid;
-  findTemplateById(templateid, function(error, template) {
+  console.log(" passage dans fonction 1 : templateid=" + templateid);
+  findTemplateById(templateid, function(error, templateid) {
+    console.log(" passage dans call back de la fonction 2 : templateid=" + templateid);
     if (error) return next(error);
-    return response.render('templatetoload', template);
+    return response.render('templatetoload', templateid);
   });
 });
 
