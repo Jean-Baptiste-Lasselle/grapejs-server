@@ -57,13 +57,20 @@ var findTemplateById = function (templateid, callback) {
 	   // link tags auto-close
 	   
      }
+    if( name === "meta" ) {
+	   console.log(" HOP :  " + name);
+	   console.log(" HOP :  " + JSON.stringify(attrs));
+	   console.log(" HOP old charset :  " + attrs.charset);
+	   attrs.charset = "omega/" + attrs.charset.split(" ")[0];
+	   console.log(" HOP new charset :  " + attrs.charset);
+     }
      // on close tag
 	   pageTraitee.append("<" + name + " ");
 	   Object.keys(attrs).forEach(function(key){
 	     console.log(key + "=" + "'" + attrs[key] + "'");
 	     pageTraitee.append(key + '=' + "'" + attrs[key] + "'");	   
            });
-      if ( name === "link") {
+      if ( name === "link" || name === "meta") {
         pageTraitee.append(" />");
         
       } else {
@@ -72,7 +79,7 @@ var findTemplateById = function (templateid, callback) {
   });
   
   parser.on('closetag', (name, attrs) => {
-    if( name === "link" ) {
+    if( name === "link" || name === "meta") {
            console.log("  " + name + " tags auto-close");
      } else {
            pageTraitee.append("</");
