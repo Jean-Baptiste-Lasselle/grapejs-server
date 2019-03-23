@@ -1,6 +1,7 @@
 const fs = require ('fs');
 const replaceString = require('replace-string');
 const cheerio = require('cheerio');
+const htmlparser = require('node-xml-stream');
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
@@ -23,33 +24,24 @@ var findTemplateById = function (templateid, callback) {
   console.log(page.toString());
   
   
-  const $ = cheerio.load(page.toString());
+  //const $ = cheerio.load(page.toString());
   
   console.log(" +++++++++++++++++++++++");
   console.log(" +++++     ICI    ++++++");
   console.log(" +++++++++++++++++++++++");
   
-  // console.log(" attribut source = " + $('image').attr('src'));
-  $(`img`).attr(`src`, (i, val) => {
-    console.log(" Balise no. " + i + " attribut source = " + val);
+  var parser = new htmlparser();
+  //var root = htmlparser.parse(page.toString());
+  parser.on('opentag', (name, attrs) => {
+	   console.log(" HOP :  " + name);
+	   attrs = { src: 'omega/' + this.value }
   });
-  $("img").each(function() {
-        var old_src=$(this).attr("src");
-        var new_src = "omega/" + old_src;
-        console.log(new_src);
-        $(this).attr("src", new_src);            
-  });
-  // $.html()
   
-  /*
-  if (!users[templateid])
-    return callback(new Error(
-      'No template matching '
-       + templateid
-      )
-    );
-    */
-  return callback(null, page);
+  var pageTraitee = parser.write(page.toString());
+  
+  
+  
+  return callback(null, pageTraitee);
 };
 
 
