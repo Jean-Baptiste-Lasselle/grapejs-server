@@ -14,7 +14,7 @@ export URL_TEMPLATE_HTML5=https://templated.co/picturesque/download
 
 demanderURL_TEMPLATE () {
   echo "Veuillez saisir l'URL de téléchargement du template HTML5 sur lequel vous voulez travailler"
-  read -p " " URL_TEMPLATE_HTML5
+  read -p "" URL_TEMPLATE_HTML5
   echo "  "
 }
 
