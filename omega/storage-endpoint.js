@@ -16,20 +16,9 @@ var findTemplateById = function (templateid, callback) {
   // Perform database query that calls callback when it's done
   // This is our fake database
   // Ici, je vais aller chercher le fichier HMTL omega/index.html, définit par 
-  // Check if the file exists in the current directory.
-  fs.access(htmlFileToLoadForEdition, fs.constants.F_OK, (err) => {
-  
-    console.log(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
-    if (err) {
-       console.log(err);
-    } else {
-       console.log(`${htmlFileToLoadForEdition}` + ' exists.');
-    }
-  
-  });
-  
 
-  page = fs.readFile("workspace/omega/" + htmlFileToLoadForEdition);
+
+  page = fs.readFileSync("workspace/omega/" + htmlFileToLoadForEdition);
   console.log(page.toString());
   /*
   if (!users[templateid])
