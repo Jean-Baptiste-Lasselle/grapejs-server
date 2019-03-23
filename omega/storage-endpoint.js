@@ -21,9 +21,7 @@ var findTemplateById = function (templateid, callback) {
   
     console.log(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
     if (err) {
-       var erreur = new Error(`${htmlFileToLoadForEdition} ${err ? 'does not exist' : 'exists'}`);
-       return callback(erreur);
-       // throw erreur;
+       console.log(err);
     } else {
        console.log(`${htmlFileToLoadForEdition}` + ' exists.');
     }
