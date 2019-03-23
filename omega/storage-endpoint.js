@@ -2,6 +2,8 @@ const fs = require ('fs');
 const replaceString = require('replace-string');
 const cheerio = require('cheerio');
 const htmlparser = require('node-xml-stream');
+// "stringbuffer": "^1.0.0"
+const StringBuffer = require("stringbuffer");
 
 const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
@@ -30,6 +32,7 @@ var findTemplateById = function (templateid, callback) {
   console.log(" +++++     ICI    ++++++");
   console.log(" +++++++++++++++++++++++");
   
+  var pageTraitee = new StringBuffer();
   var parser = new htmlparser();
   //var root = htmlparser.parse(page.toString());
   parser.on('opentag', (name, attrs) => {
@@ -39,14 +42,22 @@ var findTemplateById = function (templateid, callback) {
 	   console.log(" HOP old src :  " + attrs.src);
 	   attrs.src = "omega/" + attrs.src;
 	   console.log(" HOP old src :  " + attrs.src);
-	   //attrs = { src: 'omega/' + this.value }
-    }
+	   // attrs = { src: 'omega/' + this.value }
+	   
+     }
+     // on close tag
+     pageTraitee.append("<" + name + " " + ">");
+     
+     Object.keys(attrs).forEach(function(key){
+         console.log(key + '=' + obj[key]);
+     });
   });
+
   
   // var pageTraitee = parser.write(page.toString());
-  parser.write(page.toString());
-  
-  var pageTraitee = parser.end();
+  var everythingWentOnGood = parser.write(page.toString());
+  // to get more info on error if (!everythingWentOnGood)
+  var resumeInfoTraitment = parser.end();
   console.log(JSON.stringify(pageTraitee));
   return callback(null, pageTraitee);
 };
