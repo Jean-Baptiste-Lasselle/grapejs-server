@@ -114,6 +114,9 @@
           'gjs-preset-webpage': {}
         }
       });
+      editor.on('storage:load', function(e) {
+          console.log(' JBL Just tested that Storage Manager just loaded the following from server :  ', e);
+      });
     </script>
   </body>
 </html>
