@@ -54,21 +54,32 @@ var findTemplateById = function (templateid, callback) {
 	   attrs.href = "omega/" + attrs.href;
 	   console.log(" HOP old src :  " + attrs.href);
 	   // attrs = { src: 'omega/' + this.value }
+	   // link tags auto-close
+	   
      }
      // on close tag
-     pageTraitee.append("<" + name + " ");
-     Object.keys(attrs).forEach(function(key){
-         console.log(key + "=" + "'" + attrs[key] + "'");
-         pageTraitee.append(key + '=' + "'" + attrs[key] + "'");
-     });
-     
-     pageTraitee.append(" >");
+	   pageTraitee.append("<" + name + " ");
+	   Object.keys(attrs).forEach(function(key){
+	     console.log(key + "=" + "'" + attrs[key] + "'");
+	     pageTraitee.append(key + '=' + "'" + attrs[key] + "'");	   
+           });
+      if ( name === "link") {
+        pageTraitee.append(" />");
+        
+      } else {
+        pageTraitee.append(" >");
+      }
   });
+  
   parser.on('closetag', (name, attrs) => {
+    if( name === "link" ) {
+           console.log("  " + name + " tags auto-close");
+     } else {
+           pageTraitee.append("</");
+           pageTraitee.append(name);
+           pageTraitee.append(">");
+     }
      // on close tag
-     pageTraitee.append("</");
-     pageTraitee.append(name);
-     pageTraitee.append(">");
   });
   
   // <tag>TEXT</tag>
