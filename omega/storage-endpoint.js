@@ -52,7 +52,7 @@ var findTemplateById = function (templateid, callback) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
      console.log(" HOP old href :  " + attrs.href);
-     console.log(" HOP attrs.href.split(" ")[0] :  " + attrs.href.split(" ")[0]);
+     console.log(" HOP attrs.href.split(\" \")[0] :  " + attrs.href.split(" ")[0]);
 	   attrs.href = "omega/" + attrs.href.split(" ")[0];
 	   console.log(" HOP new href :  " + attrs.href);
 	   // attrs = { src: 'omega/' + this.value }
