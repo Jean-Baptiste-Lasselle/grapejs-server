@@ -19,24 +19,24 @@ console.log("Verification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileTo
 var findTemplateById = function (templateid, callback) {
   // Perform database query that calls callback when it's done
   // This is our fake database
-  // Ici, je vais aller chercher le fichier HMTL omega/index.html, definit par 
+  // Ici, je vais aller chercher le fichier HMTL omega/index.html, definit par
 
 
   page = fs.readFileSync(htmlFileToLoadForEdition);
   console.log(page.toString());
-  
-  
+
+
   //const $ = cheerio.load(page.toString());
-  
+
   console.log(" +++++++++++++++++++++++");
   console.log(" +++++     ICI    ++++++");
   console.log(" +++++++++++++++++++++++");
-  
+
   var pageTraitee = new StringBuffer();
   pageTraitee.append("<!DOCTYPE HTML>");
   pageTraitee.append("<html>");
-  
-  
+
+
   var parser = new htmlparser();
   //var root = htmlparser.parse(page.toString());
   parser.on('opentag', (name, attrs) => {
@@ -51,12 +51,13 @@ var findTemplateById = function (templateid, callback) {
     if( name === "link" && _.has(attrs, 'href')) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
-	   console.log(" HOP old href :  " + attrs.href);
+     console.log(" HOP old href :  " + attrs.href);
+     console.log(" HOP attrs.href.split(" ")[0] :  " + attrs.href.split(" ")[0]);
 	   attrs.href = "omega/" + attrs.href.split(" ")[0];
 	   console.log(" HOP new href :  " + attrs.href);
 	   // attrs = { src: 'omega/' + this.value }
 	   // link tags auto-close
-	   
+
      }
     if( name === "meta"  && _.has(attrs, 'charset')) {
 	   console.log(" HOP :  " + name);
@@ -69,16 +70,16 @@ var findTemplateById = function (templateid, callback) {
 	   pageTraitee.append("<" + name + " ");
 	   Object.keys(attrs).forEach(function(key){
 	     console.log(key + "=" + "'" + attrs[key] + "'");
-	     pageTraitee.append(key + '=' + "'" + attrs[key] + "'");	   
+	     pageTraitee.append(key + '=' + "'" + attrs[key] + "'");
            });
       if ( name === "link" || name === "meta") {
         pageTraitee.append(" />");
-        
+
       } else {
         pageTraitee.append(" >");
       }
   });
-  
+
   parser.on('closetag', (name, attrs) => {
     if( name === "link" || name === "meta") {
            console.log("  " + name + " tags auto-close");
@@ -89,16 +90,16 @@ var findTemplateById = function (templateid, callback) {
      }
      // on close tag
   });
-  
+
   // <tag>TEXT</tag>
   parser.on('text', letext => {
       // text = 'TEXT'
       pageTraitee.append(letext);
   });
-  
+
 
   pageTraitee.append("</html>");
-  
+
   // var pageTraitee = parser.write(page.toString());
   var everythingWentOnGood = parser.write(page.toString());
   // to get more info on error if (!everythingWentOnGood)
@@ -108,7 +109,7 @@ var findTemplateById = function (templateid, callback) {
 };
 
 
-// Even though an express reference was created by omega.js entrypoint 
+// Even though an express reference was created by omega.js entrypoint
 var express = require('express');
 var storageRouter = express.Router();
 
@@ -128,7 +129,7 @@ storageRouter.get('/v1/templates/:templateid', function(request, response, next)
     jsonRetourne.style = null;
     jsonRetourne.components = null;
     return response.send(jsonRetourne);
-    
+
   });
 });
 

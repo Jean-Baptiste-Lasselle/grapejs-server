@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>GrapesJS Preset Webpage</title>
     <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+    <link href="dist/omega.min.css" rel="stylesheet">
     <link href="dist/grapesjs-preset-webpage.min.css" rel="stylesheet">
     <script src="//feather.aviary.com/imaging/v3/editor.js"></script>
     <script src="https://static.filestackapi.com/v3/filestack-0.1.10.js"></script>
@@ -78,7 +79,7 @@
 
 
     <script type="text/javascript">
-      
+
       // Lets say, for instance, you start with your already defined HTML template and you'd like to
       // import it on fly for the user
       const LandingPage = {
@@ -88,7 +89,7 @@
         style: null,
       };
       var editor = grapesjs.init({
-        
+
         // The `components` accepts HTML string or a JSON of components
         // Here, at first, we check and use components if are already defined, otherwise
         // the HTML string gonna be used
@@ -125,7 +126,7 @@
           editor.css = e.css;
           editor.style = e.style;
           editor.components = e.components;
-          
+
       });
     </script>
   </body>
