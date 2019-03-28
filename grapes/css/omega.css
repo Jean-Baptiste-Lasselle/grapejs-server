@@ -46,3 +46,19 @@ body {font-family: Arial;}
   height: 100%;
   padding: 0ex;
  }
+
+
+/**
+ *  Addons with skeleton css framework
+ **/
+#GrapesJSEditor {
+   display: block;
+   height: 100%;
+   width: 100%;
+}
+
+#gjs {
+
+  width: 100%;
+  height: 800px;
+}
