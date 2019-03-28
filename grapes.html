@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>GrapesJS Preset Webpage</title>
     <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
-    <link href="dist/omega.min.css" rel="stylesheet">
+    <link href="omega.css" rel="stylesheet">
     <link href="dist/grapesjs-preset-webpage.min.css" rel="stylesheet">
     <script src="//feather.aviary.com/imaging/v3/editor.js"></script>
     <script src="https://static.filestackapi.com/v3/filestack-0.1.10.js"></script>
@@ -20,62 +20,132 @@
   </head>
   <body>
 
-    <div id="gjs" style="height:0px; overflow:hidden">
-      <div class="panel">
-        <h1 class="welcome">Welcome to</h1>
-        <div class="big-title">
-          <svg class="logo" viewBox="0 0 100 100">
-            <path d="M40 5l-12.9 7.4 -12.9 7.4c-1.4 0.8-2.7 2.3-3.7 3.9 -0.9 1.6-1.5 3.5-1.5 5.1v14.9 14.9c0 1.7 0.6 3.5 1.5 5.1 0.9 1.6 2.2 3.1 3.7 3.9l12.9 7.4 12.9 7.4c1.4 0.8 3.3 1.2 5.2 1.2 1.9 0 3.8-0.4 5.2-1.2l12.9-7.4 12.9-7.4c1.4-0.8 2.7-2.2 3.7-3.9 0.9-1.6 1.5-3.5 1.5-5.1v-14.9 -12.7c0-4.6-3.8-6-6.8-4.2l-28 16.2"/>
-          </svg>
-          <span>GrapesJS</span>
-        </div>
-        <div class="description">
-          This is a demo content from index.html. For the development, you shouldn't edit this file, instead you can
-          copy and rename it to _index.html, on next server start the new file will be served, and it will be ignored by git.
-        </div>
-      </div>
-      <style>
-        .panel {
-          width: 90%;
-          max-width: 700px;
-          border-radius: 3px;
-          padding: 30px 20px;
-          margin: 150px auto 0px;
-          background-color: #d983a6;
-          box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
-          color:rgba(255,255,255,0.75);
-          font: caption;
-          font-weight: 100;
-        }
-        .welcome {
-          text-align: center;
-          font-weight: 100;
-          margin: 0px;
-        }
-        .logo {
-          width: 70px;
-          height: 70px;
-          vertical-align: middle;
-        }
-        .logo path {
-          pointer-events: none;
-          fill: none;
-          stroke-linecap: round;
-          stroke-width: 7;
-          stroke: #fff
-        }
-        .big-title {
-          text-align: center;
-          font-size: 3.5rem;
-          margin: 15px 0;
-        }
-        .description {
-          text-align: justify;
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-      </style>
+
+    <!-- ++++++++++++++++++++++++++++++- -->
+    <!-- ++++++++++++++++++++++++++++++- -->
+    <!-- BASICALLY THE Tab system  there -->
+    <!-- ++++++++++++++++++++++++++++++- -->
+    <!-- ++++++++++++++++++++++++++++++- -->
+    <h2>Omega Editor</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="tab">
+      <button class="tablinks" onclick="omegaNavigate(event, 'OmegaFileExplorer')">London</button>
+      <button class="tablinks" onclick="omegaNavigate(event, 'GrapesJSEditor')">Paris</button>
+      <button class="tablinks" onclick="omegaNavigate(event, 'OmegaHelp')">Tokyo</button>
     </div>
+    <!-- BASICALLY THE File Explorer Tab down there -->
+    <div id="OmegaFileExplorer" class="tabcontent">
+      <h3>Welcome to the Omega File Explorer</h3>
+      <p><em>Omeaga : Command n Control your <code>GrapesJS</code> Editor.</em></p>
+      <article>
+        <header>
+          <h4>The file explorer is gonna be down there</h4>
+          <p>It's going tobe a regular treeview, with CRUD on folders/files, plus a set of command button to reload from a new template</p>
+        </header>
+        <section>
+          <p>So there we gona have a treeview</p>
+        </section>
+      </article>
+    </div>
+   <!-- BASICALLY THE GRapesJS Editor Tab down there -->
+    <div id="GrapesJSEditor" class="tabcontent">
+      <!-- ++++++++++++++++++++++++++++++- -->
+      <!-- ++++++++++++++++++++++++++++++- -->
+      <!-- BASICALLY THE editor down there -->
+      <!-- ++++++++++++++++++++++++++++++- -->
+      <!-- ++++++++++++++++++++++++++++++- -->
+          <div id="gjs" style="height:0px; overflow:hidden">
+            <div class="panel">
+              <h1 class="welcome">Welcome to</h1>
+              <div class="big-title">
+                <svg class="logo" viewBox="0 0 100 100">
+                  <path d="M40 5l-12.9 7.4 -12.9 7.4c-1.4 0.8-2.7 2.3-3.7 3.9 -0.9 1.6-1.5 3.5-1.5 5.1v14.9 14.9c0 1.7 0.6 3.5 1.5 5.1 0.9 1.6 2.2 3.1 3.7 3.9l12.9 7.4 12.9 7.4c1.4 0.8 3.3 1.2 5.2 1.2 1.9 0 3.8-0.4 5.2-1.2l12.9-7.4 12.9-7.4c1.4-0.8 2.7-2.2 3.7-3.9 0.9-1.6 1.5-3.5 1.5-5.1v-14.9 -12.7c0-4.6-3.8-6-6.8-4.2l-28 16.2"/>
+                </svg>
+                <span>GrapesJS</span>
+              </div>
+              <div class="description">
+                This is a demo content from index.html. For the development, you shouldn't edit this file, instead you can
+                copy and rename it to _index.html, on next server start the new file will be served, and it will be ignored by git.
+              </div>
+            </div>
+            <style>
+              .panel {
+                width: 90%;
+                max-width: 700px;
+                border-radius: 3px;
+                padding: 30px 20px;
+                margin: 150px auto 0px;
+                background-color: #d983a6;
+                box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
+                color:rgba(255,255,255,0.75);
+                font: caption;
+                font-weight: 100;
+              }
+              .welcome {
+                text-align: center;
+                font-weight: 100;
+                margin: 0px;
+              }
+              .logo {
+                width: 70px;
+                height: 70px;
+                vertical-align: middle;
+              }
+              .logo path {
+                pointer-events: none;
+                fill: none;
+                stroke-linecap: round;
+                stroke-width: 7;
+                stroke: #fff
+              }
+              .big-title {
+                text-align: center;
+                font-size: 3.5rem;
+                margin: 15px 0;
+              }
+              .description {
+                text-align: justify;
+                font-size: 1rem;
+                line-height: 1.5rem;
+              }
+            </style>
+          </div>
+    </div>
+    <!-- BASICALLY the end of the grapesjs Editor here -->
+    <!-- BASICALLY some rubbish  GRapesJS Editor Tab down there -->
+    <div id="OmegaHelp" class="tabcontent">
+      <h3>Some Rubbish Tokyo Games, ltd.</h3>
+      <p>Tokyo is the capital of Japan, and there are many robot games ober there. Wanna know more? We get the f**ck outta here.</p>
+    </div>
+
+    <script>
+    function omegaNavigate(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script type="text/javascript">
