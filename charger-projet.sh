@@ -29,6 +29,10 @@ chargerleProjet () {
 
 }
 
+# Netttoyer
+if [ -d workspace/omega ]; then rm -rf workspace/omega; fi;
+mkdir -p workspace/omega
+
 demanderURL_TEMPLATE
 
 while true; do
@@ -42,5 +46,3 @@ while true; do
 done
 
 echo "Kata Prêt!"
-
-
