@@ -20,23 +20,27 @@
     </style>
   </head>
   <body>
+
+
 <div class="container">
-
-    <!-- ++++++++++++++++++++++++++++++- -->
-    <!-- ++++++++++++++++++++++++++++++- -->
-    <!-- BASICALLY THE Tab system  there -->
-    <!-- ++++++++++++++++++++++++++++++- -->
-    <!-- ++++++++++++++++++++++++++++++- -->
-    <h2>Omega Editor</h2>
-    <p>Click on the buttons inside the tabbed menu:</p>
-
-    <div class="tab row">
+   <div class="tab row">
+     <!-- ++++++++++++++++++++++++++++++- -->
+     <!-- ++++++++++++++++++++++++++++++- -->
+     <!-- BASICALLY THE Tab system  there -->
+     <!-- ++++++++++++++++++++++++++++++- -->
+     <!-- ++++++++++++++++++++++++++++++- -->
+     <h2>Omega Editor</h2>
+     <p>Click on the buttons inside the tabbed menu:</p>
       <div class="six columns" style="margin-top: 3em">
       <button class="tablinks" onclick="omegaNavigate(event, 'GrapesJSEditor')"><code>GrapesJS Editor</code></button>
       <button class="tablinks" onclick="omegaNavigate(event, 'OmegaFileExplorer')"><code>Omega File Explorer</code></button>
       <button class="tablinks" onclick="omegaNavigate(event, 'OmegaHelp')"><code>help</code></button>
       </div>
     </div>
+</div>
+
+
+<div class="container">
     <!-- BASICALLY THE GRapesJS Editor Tab down there -->
      <div id="GrapesJSEditor" class="tabcontent omega row">
        <div class="twelve columns" >
@@ -104,6 +108,10 @@
          </div>
      <!-- BASICALLY the end of the grapesjs Editor here -->
      </div>
+   </div>
+
+   
+   <div class="container">
     <!-- BASICALLY THE File Explorer Tab down there -->
     <div id="OmegaFileExplorer" class="tabcontent omega row">
       <div class="twelve columns" style="padding: 2em;">
