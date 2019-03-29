@@ -58,13 +58,15 @@ body {font-family: Arial;}
 }
 
 #gjs {
-
   width: 100%;
   height: 800px;
 }
 /* overriding skeleton CSS FRamework's default to 960px */
-.container {
+.container omega {
   /* min-width: 1200px; */
   max-width: 1440px;
   width: 100%;
+}
+button {
+  margin: 2em;
 }

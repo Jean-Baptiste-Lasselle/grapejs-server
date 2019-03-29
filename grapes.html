@@ -223,8 +223,11 @@
       }
       document.getElementById(desiredActivity).style.display = "block";
       evt.currentTarget.className += " active";
-      // $("#gjs").witdh('100%');
 
+      // resseting window size b**tch
+      // $("#gjs").witdh('100%');
+      $(".container omega").attr("max-width", "1440px");
+      $("#gjs").witdh("100", "%");
       // $("#gjs").witdh("100", "%");
       $("#gjs").height("950", "px");
     }
@@ -234,10 +237,10 @@
     <!-- Tab system initializing -->
     <script >
       $(document).ready( function() {
-        // $("#gjs").witdh('100%');
+        console.log(" JBL page chargée");
+        $(".container omega").attr("max-width", "1440px");
         $("#gjs").witdh("100", "%");
         $("#gjs").height("800", "px");
-        console.log(" JBL page chargée");
       });
     </script>
 
