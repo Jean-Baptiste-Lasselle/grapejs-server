@@ -66,5 +66,5 @@ body {font-family: Arial;}
 .container {
   /* min-width: 1200px; */
   max-width: 1440px;
-
+  width: 100%;
 }
