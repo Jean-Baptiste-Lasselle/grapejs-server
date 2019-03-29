@@ -64,7 +64,7 @@ body {font-family: Arial;}
 /* overriding skeleton CSS FRamework's default to 960px */
 .container omega {
   /* min-width: 1200px; */
-  max-width: 1440px;
+  max-width: 90vw;
   width: 100%;
 }
 button {
