@@ -27,7 +27,7 @@ omega.use(express.static('grapes'));
 omega.use("/demo", express.static('workspace/omega'));
 
 
-var storage_endpoint = require('./omega/storage-endpoint');
+var storage_endpoint = require('./demo/storage-endpoint');
 
 omega.use('/storage', storage_endpoint);
 
