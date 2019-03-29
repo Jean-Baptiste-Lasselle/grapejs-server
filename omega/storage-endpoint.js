@@ -5,7 +5,7 @@ const htmlparser = require('node-xml-stream');
 const StringBuffer = require("stringbuffer");
 const _ =require('lodash');
 
-const htmlFileToLoadForEdition = "workspace/demo/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
+const htmlFileToLoadForEdition = "workspace/omega/" + process.env.HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH
 
 console.log("Verification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileToLoadForEdition);
 
@@ -19,7 +19,7 @@ console.log("Verification HTML_FILE_TO_LOAD_OMEGA_REALTIVE_PATH : " + htmlFileTo
 var findTemplateById = function (templateid, callback) {
   // Perform database query that calls callback when it's done
   // This is our fake database
-  // Ici, je vais aller chercher le fichier HMTL demo/index.html, definit par
+  // Ici, je vais aller chercher le fichier HMTL omega/index.html, definit par
 
 
   page = fs.readFileSync(htmlFileToLoadForEdition);
@@ -44,18 +44,18 @@ var findTemplateById = function (templateid, callback) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
 	   console.log(" HOP old src :  " + attrs.src);
-	   attrs.src = "demo/" + attrs.src;
+	   attrs.src = "omega/" + attrs.src;
 	   console.log(" HOP old src :  " + attrs.src);
-	   // attrs = { src: 'demo/' + this.value }
+	   // attrs = { src: 'omega/' + this.value }
      }
     if( name === "link" && _.has(attrs, 'href')) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
      console.log(" HOP old href :  " + attrs.href);
      console.log(" HOP attrs.href.split(\" \")[0] :  " + attrs.href.split(" ")[0]);
-	   attrs.href = "demo/" + attrs.href.split(" ")[0];
+	   attrs.href = "omega/" + attrs.href.split(" ")[0];
 	   console.log(" HOP new href :  " + attrs.href);
-	   // attrs = { src: 'demo/' + this.value }
+	   // attrs = { src: 'omega/' + this.value }
 	   // link tags auto-close
 
      }
@@ -63,7 +63,7 @@ var findTemplateById = function (templateid, callback) {
 	   console.log(" HOP :  " + name);
 	   console.log(" HOP :  " + JSON.stringify(attrs));
 	   console.log(" HOP old charset :  " + attrs.charset);
-	   attrs.charset = "demo/" + attrs.charset.split(" ")[0];
+	   attrs.charset = "omega/" + attrs.charset.split(" ")[0];
 	   console.log(" HOP new charset :  " + attrs.charset);
      }
      // on close tag
